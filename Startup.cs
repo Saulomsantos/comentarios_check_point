@@ -15,6 +15,14 @@ namespace Senai.Projetos.Comentarios_Check_Point
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // Serviço que serve para verificar se há usuário logado
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(
+                options => options.IdleTimeout = TimeSpan.FromMinutes(30)
+            );
+            
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,10 +33,16 @@ namespace Senai.Projetos.Comentarios_Check_Point
                 app.UseDeveloperExceptionPage();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            app.UseSession();
+
+            app.UseStaticFiles();
+
+            app.UseMvc(
+                rota => rota.MapRoute(
+                    name: "default",
+                    template: "{controller=System}/{action=Planos}"
+                )
+            );
         }
     }
 }
