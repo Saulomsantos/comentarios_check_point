@@ -1,6 +1,3 @@
-@using Senai.Projetos.Comentarios_Check_Point.Models
-@using Senai.Projetos.Comentarios_Check_Point.Repositorios
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,86 +8,96 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style_planos.css">
-    <title>Planos</title>
+    <link rel="stylesheet" href="../css/style_home.css">
+    <title>Check Point</title>
 </head>
 
 <body>
     <header>
         <nav id="topo">
             <div class="logo_checkpoint">
-                <a href="index.html">
+                <a href="/Pages/Home">
                     <img src="../img/logos/logo_check_point.png" alt="logotipo do produto checkpoint constituído por um círculo azul com um ícone de lozalicação dentro e ao lado o nome check point">
                 </a>
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="carfel.html">carfel</a></li>
-                    <li><a href="/System/Planos">planos</a></li>
-                    <li><a href="ajuda.html">ajuda</a></li>
-                    <li><a href="contato.html">contato</a></li>
+                    <li><a href="/Pages/Home">home</a></li>
+                    <li><a href="/Pages/Carfel">carfel</a></li>
+                    <li><a href="/Pages/Planos">planos</a></li>
+                    <li><a href="/Pages/Ajuda">ajuda</a></li>
+                    <li><a href="/Pages/Contato">contato</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="alert">
+            <p>Página em construção.<br><br> Visite as demais páginas do site através do menu acima.</p>
+        </div>
         <section id="banner">
-            <div class="planos">
-                <h1>Planos</h1>
-                <p>Os planos oferecidos são três. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-                    molestias sint ut, accusantium, at voluptas quod deleniti nobis obcaecati ea praesentium libero,
-                    blanditiis suscipit nesciunt expedita laboriosam ipsam odio facere?</p>
+            <div class="check_point">
+                <h1>Check Point</h1>
+                <p>O Check Point é um sistema que visa fazer com que. O Check Point é um sistema que visa fazer com
+                    que. O Check Point é um sistema que visa fazer com que. O Check Point é um sistema que visa
+                    fazer
+                    com que. O Check Point é um sistema que visa fazer com que. O Check Point é um sistema que visa
+                    fazer com que.</p>
+                <nav class="botoes">
+                    <a href="planos.html" class="botao_planos">Planos</a>
+                    <a href="#funcionalidades" class="botao_como">Como?</a>
+                </nav>
+            </div>
+            <div class="mockup">
+                <img src="../img/mockup/mockup.png" alt="imagem com alguns dispositivos como celular, tablet e computadores mostrando o sistema check point em funcionamento">
             </div>
         </section>
     </header>
 
     <main>
-        <div class="tipos_planos">
-            <div class="free">
-                <h2>Free</h2>
-                <div class="preco">
-                    <p>R$ XX,XX</p>
+        <section>
+            <a id="funcionalidades"></a>
+            <h2>Funcionalidades</h2>
+            <div class="timeline">
+                <div class="secao_esq">
+                    <div class="location">
+                        <div class="desc_location">
+                            <h3>Onde estiver</h3>
+                            <p>Gerencie sua equipe da sua casa, do seu escritório ou de qualquer outro local.</p>
+                        </div>
+                        <div class="icon_timeline">
+                            <img src="../img/icon/location.png" alt="ícone de localização, com um ponto no centro de um círculo">
+                        </div>
+                        <div class="linha_horizontal"></div>
+                    </div>
                 </div>
-                <div class="periodo">
-                    <p>Período</p>
+                <div class="secao_mid">
+                    <div class="linha_vertical"></div>
                 </div>
-                <div class="desc_free">
-                    <p>O plano free oferece. O plano free oferece. O plano free oferece. </p>
-                </div>
-                <div class="botao_adquirir">
-                    <a href="#">Adquirir</a>
-                </div>
-            </div>
-            <div class="basico">
-                <h2>Básico</h2>
-                <div class="preco">
-                    <p>R$ XX,XX</p>
-                </div>
-                <div class="periodo">
-                    <p>Período</p>
-                </div>
-                <div class="desc_basico">
-                    <p>O plano básico oferece. O plano básico oferece. O plano básico oferece.</p>
-                </div>
-                <div class="botao_adquirir">
-                    <a href="#">Adquirir</a>
-                </div>
-            </div>
-            <div class="premium">
-                <h2>Premium</h2>
-                <div class="preco">
-                    <p>R$ XX,XX</p>
-                </div>
-                <div class="periodo">
-                    <p>Período</p>
-                </div>
-                <div class="desc_premium">
-                    <p>O plano premium oferece. O plano premium oferece.</p>
-                </div>
-                <div class="botao_adquirir">
-                    <a href="#">Adquirir</a>
+                <div class="secao_dir">
+                    <div class="time">
+                        <div class="linha_horizontal"></div>
+                        <div class="icon_timeline">
+                            <img src="../img/icon/clock.png" alt="ícone de um relógio simples, um círculo com dois ponteiros">
+                        </div>
+                        <div class="desc_time">
+                            <h3>Controle de horário</h3>
+                            <p>Com o Check Point se torna possível administrar o horário dos membros mesmo à distância.</p>
+                        </div>
+                    </div>
+                    <div class="teams">
+                        <div class="linha_horizontal"></div>
+                        <div class="icon_timeline">
+                            <img src="../img/icon/team.png" alt="ícone representando um time com três pessoas">
+                        </div>
+                        <div class="desc_time">
+                            <h3>Organize times</h3>
+                            <p>Outra vantagem do Check Point é a possibilidade de criação de times, facilitande a
+                                organização
+                                e otimização das tarefas.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
         <div id="clientes">
             <div class="adidas">
                 <img src="../img/logos/clients/logo_adidas.png" alt="logotipo da adidas, três listras na diagonal com o nome adidas embaixo">
@@ -114,36 +121,6 @@
                 <img src="../img/logos/clients/logo_hp.png" alt="logotipo da HP, a sigla HP dentro de um círculo">
             </div>
         </div>
-        <div class="avaliacoes">
-            <h2>Avaliações de nossos clientes</h2>
-            <div class="comentarios">
-                @{
-                    ComentarioRepositorio comentarioRepositorio = new ComentarioRepositorio();
-
-                    ViewData["Comentarios"] = comentarioRepositorio.Listar();
-                }
-                @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>)
-                {
-                    @if (item.Status == "Aprovado")
-                    {
-                        <div class="comentario">
-                            <div class="nome_usuario">
-                                @item.Usuario.Nome<br>
-                            </div>
-                            <div class="data_criacao">
-                                @item.DataCriacao<br>
-                            </div>
-                            <div class="corpo">
-                                @item.Texto<br>
-                            </div>
-                        </div>
-                    }
-                }
-            </div>
-            <div class="botao_comentar">
-                <a href="/Usuario/Login">Registrar comentário</a>
-            </div>
-        </div>
     </main>
 
     <footer>
@@ -153,6 +130,15 @@
                     <img src="../img/logos/tipo_carfel.png" alt="logotipo da empresa carfel. palavra carfel">
                 </a>
 
+            </div>
+            <div class="linha_vertical"></div>
+            <div id="desc_carfel">
+                <p>A Carfel nasceu a partir da ideia de fazer com que, assim após reuniões e debates, os fundadores
+                    chegaram
+                    a. Criada desde o ano, já conta com diversos projetos em sua história, firmados com grandes
+                    empresas
+                    multinacionais.
+                </p>
             </div>
             <div class="linha_vertical"></div>
             <nav id="social_media">
@@ -195,20 +181,26 @@
                 <div class="chat-msg chat-msg-enviada">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam
                         doloremque
-                        ipsam veniam maxime molestias magnam voluptates nobis blanditiis?</p>
+                        ipsam veniam maxime molestias magnam voluptates nobis blanditiis, consequatur dolores alias
+                        sapiente
+                        deleniti praesentium reiciendis veritatis?</p>
                     <span class="chat-msg-horario">10:00</span>
                 </div>
                 <div class="chat-msg chat-msg-recebida">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam
                         doloremque
-                        ipsam veniam maxime molestias magnam voluptates nobis blanditiis?</p>
-                    <span class="chat-msg-horario">10:02</span>
+                        ipsam veniam maxime molestias magnam voluptates nobis blanditiis, consequatur dolores alias
+                        sapiente
+                        deleniti praesentium reiciendis veritatis?</p>
+                    <span class="chat-msg-horario">10:00</span>
                 </div>
                 <div class="chat-msg chat-msg-enviada">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam
                         doloremque
-                        ipsam veniam maxime molestias magnam voluptates nobis blanditiis?</p>
-                    <span class="chat-msg-horario">10:05</span>
+                        ipsam veniam maxime molestias magnam voluptates nobis blanditiis, consequatur dolores alias
+                        sapiente
+                        deleniti praesentium reiciendis veritatis?</p>
+                    <span class="chat-msg-horario">10:00</span>
                 </div>
             </div>
             <div class="rodape">

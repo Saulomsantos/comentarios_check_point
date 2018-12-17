@@ -1,4 +1,5 @@
 @using Senai.Projetos.Comentarios_Check_Point.Models
+@using Senai.Projetos.Comentarios_Check_Point.Repositorios
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,8 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style_validar_comentario.css">
-    <title>Validar comentário</title>
+    <link rel="stylesheet" href="../css/style_planos.css">
+    <title>Planos</title>
 </head>
 
 <body>
@@ -33,38 +34,115 @@
             </div>
         </nav>
         <section id="banner">
-            <div class="validar_comentario">
-                <h1>Validar comentário</h1>
-                <p>Página de validação de comentários. Página de validação de comentários. Página de validação de
-                    comentários.</p>
+            <div class="planos">
+                <h1>Planos</h1>
+                <p>Os planos oferecidos são três. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                    molestias sint ut, accusantium, at voluptas quod deleniti nobis obcaecati ea praesentium libero,
+                    blanditiis suscipit nesciunt expedita laboriosam ipsam odio facere?</p>
             </div>
         </section>
     </header>
 
     <main>
-        <div class="mensagem">@TempData["Mensagem"]</div>
-        <div class="comentarios">
-            @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>)
-            {
-                @if (item.Status == "Validar")
-                {
-                    <div class="comentario">
-                        <div class="nome_usuario">
-                            @item.Usuario.Nome<br>
-                        </div>
-                        <div class="data_criacao">
-                            @item.DataCriacao<br>
-                        </div>
-                        <div class="corpo">
-                            @item.Texto<br>
-                        </div>
-                        <div class="botoes">
-                            <a href="/Comentario/Aprovar?id=@item.ID">Aprovar</a>
-                            <a href="/Comentario/Reprovar?id=@item.ID">Reprovar</a><br>
-                        </div>
-                    </div>
+        <div class="tipos_planos">
+            <div class="free">
+                <h2>Free</h2>
+                <div class="preco">
+                    <p>R$ XX,XX</p>
+                </div>
+                <div class="periodo">
+                    <p>Período</p>
+                </div>
+                <div class="desc_free">
+                    <p>O plano free oferece. O plano free oferece. O plano free oferece. </p>
+                </div>
+                <div class="botao_adquirir">
+                    <a href="#">Adquirir</a>
+                </div>
+            </div>
+            <div class="basico">
+                <h2>Básico</h2>
+                <div class="preco">
+                    <p>R$ XX,XX</p>
+                </div>
+                <div class="periodo">
+                    <p>Período</p>
+                </div>
+                <div class="desc_basico">
+                    <p>O plano básico oferece. O plano básico oferece. O plano básico oferece.</p>
+                </div>
+                <div class="botao_adquirir">
+                    <a href="#">Adquirir</a>
+                </div>
+            </div>
+            <div class="premium">
+                <h2>Premium</h2>
+                <div class="preco">
+                    <p>R$ XX,XX</p>
+                </div>
+                <div class="periodo">
+                    <p>Período</p>
+                </div>
+                <div class="desc_premium">
+                    <p>O plano premium oferece. O plano premium oferece.</p>
+                </div>
+                <div class="botao_adquirir">
+                    <a href="#">Adquirir</a>
+                </div>
+            </div>
+        </div>
+        <div id="clientes">
+            <div class="adidas">
+                <img src="../img/logos/clients/logo_adidas.png" alt="logotipo da adidas, três listras na diagonal com o nome adidas embaixo">
+            </div>
+            <div class="steam">
+                <img src="../img/logos/clients/logo_steam.png" alt="logotipo da steam, um círculo com um braço mecânico dentro">
+            </div>
+            <div class="ibm">
+                <img src="../img/logos/clients/logo_ibm.png" alt="logotipo da IBM, a sigla IBM escrita por listras horizontais bem próximas">
+            </div>
+            <div class="dell">
+                <img src="../img/logos/clients/logo_dell.png" alt="logotipo da dell, o nome dell dentro de um círculo">
+            </div>
+            <div class="intel">
+                <img src="../img/logos/clients/logo_intel.png" alt="logotipo da intel, o nome intel dentro de uma elipse">
+            </div>
+            <div class="nvidia">
+                <img src="../img/logos/clients/logo_nvidia.png" alt="logotipo da nvidia, metade de um olho fazendo junção com a metade de um quadrado e o nome nvidia embaixo">
+            </div>
+            <div class="hp">
+                <img src="../img/logos/clients/logo_hp.png" alt="logotipo da HP, a sigla HP dentro de um círculo">
+            </div>
+        </div>
+        <div class="avaliacoes">
+            <h2>Avaliações de nossos clientes</h2>
+            <div class="comentarios">
+                @{
+                    ComentarioRepositorio comentarioRepositorio = new ComentarioRepositorio();
+
+                    ViewData["Comentarios"] = comentarioRepositorio.Listar();
                 }
-            }
+                @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>)
+                {
+                    @if (item.Status == "Aprovado")
+                    {
+                        <div class="comentario">
+                            <div class="nome_usuario">
+                                @item.Usuario.Nome<br>
+                            </div>
+                            <div class="data_criacao">
+                                @item.DataCriacao<br>
+                            </div>
+                            <div class="corpo">
+                                @item.Texto<br>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="botao_comentar">
+                <a href="/Usuario/Login">Registrar comentário</a>
+            </div>
         </div>
     </main>
 

@@ -1,5 +1,3 @@
-@using Senai.Projetos.Comentarios_Check_Point.Models
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,8 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style_validar_comentario.css">
-    <title>Validar comentário</title>
+    <link rel="stylesheet" href="../css/style_carfel.css">
+    <title>Carfel</title>
 </head>
 
 <body>
@@ -33,62 +31,77 @@
             </div>
         </nav>
         <section id="banner">
-            <div class="validar_comentario">
-                <h1>Validar comentário</h1>
-                <p>Página de validação de comentários. Página de validação de comentários. Página de validação de
-                    comentários.</p>
+            <div class="carfel">
+                <h1>Carfel</h1>
+                <p>A Carfel nasceu a partir da ideia de fazer com que, assim após reuniões e debates, os fundadores chegaram
+                    a. Criada desde o ano, já conta com diversos projetos em sua história, firmados com grandes empresas
+                    multinacionais.
+                </p>
             </div>
         </section>
     </header>
 
     <main>
-        <div class="mensagem">@TempData["Mensagem"]</div>
-        <div class="comentarios">
-            @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>)
-            {
-                @if (item.Status == "Validar")
-                {
-                    <div class="comentario">
-                        <div class="nome_usuario">
-                            @item.Usuario.Nome<br>
-                        </div>
-                        <div class="data_criacao">
-                            @item.DataCriacao<br>
-                        </div>
-                        <div class="corpo">
-                            @item.Texto<br>
-                        </div>
-                        <div class="botoes">
-                            <a href="/Comentario/Aprovar?id=@item.ID">Aprovar</a>
-                            <a href="/Comentario/Reprovar?id=@item.ID">Reprovar</a><br>
-                        </div>
-                    </div>
-                }
-            }
+        <h2>História</h2>
+        <div class="timeline">
+            <div class="linha_vertical1"></div>
+            <div class="img_momento1">
+                <img src="../img/moments/momento_1.png" alt="imagem de mãos se apertando">
+            </div>
+            <div class="linha_horizontal1"></div>
+            <div class="desc_momento1">
+                <h3>00 / 00 / 00</h3>
+                <p>No dia x foi o marco para que acontecesse e se fizesse</p>
+            </div>
+            <div class="linha_vertical2"></div>
+            <div class="desc_momento2">
+                <h3>00 / 00 / 00</h3>
+                <p>No dia x foi o marco para que acontecesse e se fizesse</p>
+            </div>
+            <div class="linha_horizontal2"></div>
+            <div class="img_momento2">
+                <img src="../img/moments/momento_2.png" alt="imagem de dois homens olhando para a tela do computador">
+            </div>
+            <div class="linha_vertical3"></div>
+            <div class="img_momento3">
+                <img src="../img/moments/momento_3.png" alt="imagem do mapa mundi aberto e pessoas em volta">
+            </div>
+            <div class="linha_horizontal3"></div>
+            <div class="desc_momento3">
+                <h3>00 / 00 / 00</h3>
+                <p>No dia x foi o marco para que acontecesse e se fizesse</p>
+            </div>
+            <div class="linha_vertical4"></div>
         </div>
+        <a href="https://www.carfel.pt/" target="_blank">
+            <p>Clique aqui e visite o site da Carfel para outros produtos</p>
+        </a>
     </main>
 
     <footer>
         <div class="container_footer">
-            <div class="logo_carfel">
-                <a href="https://www.carfel.pt/" target="_blank">
-                    <img src="../img/logos/tipo_carfel.png" alt="logotipo da empresa carfel. palavra carfel">
-                </a>
-
+            <div class="carlos">
+                <div class="img_carlos">
+                    <img src="../img/profile/carlos_tsukamoto.png" alt="foto de perfil do Carlos, sorrindo, usando óculos e terno">
+                </div>
+                <div class="desc_carlos">
+                    <h4>Carlos Tsukamoto</h4>
+                    <p>Breve descrição sobre o Carlos. Breve descrição sobre o Carlos. Breve descrição sobre o Carlos.</p>
+                </div>
             </div>
             <div class="linha_vertical"></div>
-            <nav id="social_media">
-                <div class="twitter">
-                    <img src="../img/icon/social_media/twitter.png" alt="logotipo do twitter, um pássaro dentro de um círculo">
+            <div class="felipe">
+                <div class="img_felipe">
+                    <img src="../img/profile/felipe_oliveira.png" alt="foto de perfil do Felipe, usando óculos escuros olhando para o céu com árvores de fundo">
                 </div>
-                <div class="facebook">
-                    <img src="../img/icon/social_media/facebook.png" alt="logotipo do facebook, a letra F dentro de um círculo">
+                <div class="desc_felipe">
+                    <h4>Felipe Oliveira</h4>
+                    <p>Breve descrição sobre o Felipe. Breve descrição sobre o Felipe. Breve descrição sobre o Felipe.
+                    </p>
                 </div>
-                <div class="instagram">
-                    <img src="../img/icon/social_media/instagram.png" alt="logotipo do instagram, uma câmera fotográfica dentro de um círculo">
-                </div>
-            </nav>
+            </div>
         </div>
+
         <div id="chat">
             <div class="personal">
                 <nav class="flex-container">
@@ -115,20 +128,17 @@
             </div>
             <div class="corpo">
                 <div class="chat-msg chat-msg-enviada">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam
-                        doloremque
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam doloremque
                         ipsam veniam maxime molestias magnam voluptates nobis blanditiis?</p>
                     <span class="chat-msg-horario">10:00</span>
                 </div>
                 <div class="chat-msg chat-msg-recebida">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam
-                        doloremque
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam doloremque
                         ipsam veniam maxime molestias magnam voluptates nobis blanditiis?</p>
                     <span class="chat-msg-horario">10:02</span>
                 </div>
                 <div class="chat-msg chat-msg-enviada">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam
-                        doloremque
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, eos ratione doloribus numquam doloremque
                         ipsam veniam maxime molestias magnam voluptates nobis blanditiis?</p>
                     <span class="chat-msg-horario">10:05</span>
                 </div>

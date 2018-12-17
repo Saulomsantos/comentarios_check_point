@@ -1,0 +1,547 @@
+*
+{
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    background-color: rgb(220, 220, 220);
+    font-size: 24px;
+}
+
+#topo
+{
+    align-items: center;
+    background-image: linear-gradient(to right, rgb(0, 118, 127) 1%,black 185%);
+    display: flex;
+    flex-direction: row;
+    height: 5vw;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+}
+
+#topo .logo_checkpoint
+{
+    align-items: center;
+    display: flex;
+    height: auto;
+    width: 12vw;
+}
+
+#topo .logo_checkpoint a
+{
+    display: flex;
+}
+
+#topo .logo_checkpoint a img
+{
+    height: 100%;
+    width: 100%;
+}
+
+#topo .menu
+{
+    display: flex;
+    font-size: 1.55vw;
+    height: 90%;
+}
+
+#topo .menu ul
+{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    list-style-type: none;
+    text-align: center;
+}
+
+#topo .menu li
+{
+    padding: .8em 1em;
+}
+
+#topo .menu li a
+{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#topo .menu li a:hover
+{
+    color: red;
+    text-shadow: 0px 0px 2px rgb(47, 47, 47);
+}
+
+#banner
+{
+    background-image: url(../img/background/background_topo.png);
+    background-size: cover;
+    height: 39vw;
+}
+
+#banner .carfel
+{
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+#banner .carfel h1
+{
+    font-weight: 100;
+    font-size: 4vw;
+    letter-spacing: 0.05em;
+    padding-bottom: 1em;
+    text-transform: uppercase;
+}
+
+#banner .carfel p
+{
+    font-size: 2vw;
+    line-height: 3vw;
+    text-align: justify;
+    width: 60%;
+}
+
+main
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;    
+    padding-top: 16vw;
+    width: 100%;
+}
+
+main h2
+{
+    font-size: 4vw;
+    font-weight: 100;
+    letter-spacing: .05em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+main .timeline
+{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 15vw 15vw 10vw 15vw 15vw;
+    grid-template-rows: 6vw 12vw 20vw 12vw 20vw 12vw 6vw;
+    height: 88vw;
+    justify-items: center;
+    width: 70%;
+}
+
+main .timeline .linha_vertical1
+{
+    border-left: 1vw dotted black;
+    grid-area: 1 / 3;
+    height: 5vw;
+}
+
+main .timeline .img_momento1
+{
+    grid-area: 2 / 3;
+}
+
+main .timeline .img_momento1 img
+{
+    height: 100%;
+    width: 100%;
+}
+
+main .timeline .linha_horizontal1
+{
+    border-top: 1vw dotted black;
+    grid-area: 2 / 4;
+    width: 80%;
+}
+
+main .timeline .desc_momento1
+{
+    grid-area: 2 / 5;
+}
+
+main .timeline .desc_momento1 h3
+{
+    font-size: 1.5vw;
+    padding-bottom: 1.1vw;
+}
+
+main .timeline .desc_momento1 p
+{
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+main .timeline .linha_vertical2
+{
+    border-left: 1vw dotted black;
+    grid-area: 3 / 3;
+    height: 18vw;
+}
+
+main .timeline .desc_momento2
+{
+    grid-area: 4 / 1;
+}
+
+main .timeline .desc_momento2 h3
+{
+    font-size: 1.5vw;
+    padding-bottom: 1.1vw;
+}
+
+main .timeline .desc_momento2 p
+{
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+main .timeline .linha_horizontal2
+{
+    border-top: 1vw dotted black;
+    grid-area: 4 / 2;
+    width: 80%;
+}
+
+main .timeline .img_momento2
+{
+    grid-area: 4 / 3;
+}
+
+main .timeline .img_momento2 img
+{
+    height: 100%;
+    width: 100%;
+}
+
+main .timeline .linha_vertical3
+{
+    border-left: 1vw dotted black;
+    grid-area: 5 / 3;
+    height: 18vw;
+}
+
+main .timeline .img_momento3
+{
+    grid-area: 6 / 3;
+}
+
+main .timeline .img_momento3 img
+{
+    height: 100%;
+    width: 100%;
+}
+
+main .timeline .linha_horizontal3
+{
+    border-top: 1vw dotted black;
+    grid-area: 6 / 4;
+    width: 80%;
+}
+
+main .timeline .desc_momento3
+{
+    grid-area: 6 / 5;
+}
+
+main .timeline .desc_momento3 h3
+{
+    font-size: 1.5vw;
+    padding-bottom: 1.1vw;
+}
+
+main .timeline .desc_momento3 p
+{
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+main .timeline .linha_vertical4
+{
+    border-left: 1vw dotted black;
+    grid-area: 7 / 3;
+    height: 5vw;
+}
+
+main a
+{
+    color: red;
+    font-size: 2.5vw;
+    margin: 3em 0px;
+    padding: 1.5vw;
+    text-decoration: none;
+}
+
+footer
+{
+    background-image: url(../img/background/background_rodape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 37vw;
+    width: 100%;
+}
+
+footer .container_footer
+{
+    align-items: end;
+    color: white;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+    justify-items: center;
+}
+
+footer .container_footer .carlos
+{
+    align-items: center;
+    display: flex;
+    grid-area: 1 / 1;
+    height: 45%;
+    width: 80%;
+}
+
+footer .carlos .img_carlos
+{
+    min-width: 24%;
+}
+
+footer .carlos .img_carlos img
+{
+    filter: brightness(55%);
+    height: 100%;
+    width: 100%;
+}
+
+footer .carlos .desc_carlos
+{
+    font-size: 1.5vw;
+    height: 90%;
+    padding-left: 1em;
+    text-align: justify;
+}
+
+footer .carlos h4
+{
+    font-size: 1.5vw;
+    letter-spacing: .1em;
+    padding-bottom: 1em;
+}
+
+footer .container_footer .linha_vertical
+{
+    border-left: 2px solid white;
+    grid-area: 1 / 2;
+    height: 15vw;
+}
+
+footer .container_footer .felipe
+{
+    align-items: center;
+    display: flex;
+    grid-area: 1 / 3;
+    height: 45%;
+    width: 80%;
+}
+
+footer .felipe .img_felipe
+{
+    min-width: 24%;
+}
+
+footer .felipe .img_felipe img
+{
+    filter: brightness(55%);
+    height: 100%;
+    width: 100%;
+}
+
+footer .felipe .desc_felipe
+{
+    font-size: 1.5vw;
+    height: 90%;
+    padding-left: 1em;
+    text-align: justify;
+}
+
+footer .felipe h4
+{
+    letter-spacing: .1em;
+    padding-bottom: 1em;
+}
+
+/* chat */
+
+footer .flex-container
+{
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+footer .flex-container > *
+{
+    flex: 1;
+}
+
+footer #chat
+{
+    bottom: 0;
+    font-size: 1vw;
+    max-width: 400px;
+    position: fixed;
+    right: 2rem;
+    width: 20vw;
+}
+
+footer #chat .personal
+{
+    background: red;
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    height: 3vw;
+}
+
+footer #chat .perfil-imagem
+{
+    flex: 1;
+    height: 100%;
+    width: 100%;
+}
+
+footer #chat .perfil-dados
+{
+    align-items: center;
+    flex: 3;
+    display: flex;
+}
+
+footer #chat .perfil
+{
+    flex: 5;
+}
+
+footer #chat .chat-comandos
+{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+footer #chat .chat-comandos a
+{
+    padding: 5px;
+}
+
+footer #chat .perfil-imagem img
+{
+    width: auto;
+    height: 100%;
+    margin-left: .5em;
+}
+
+footer #chat personal .flex-container
+{
+    align-items: center;
+    height: 100%;
+}
+
+footer #chat .perfil-nome
+{
+    flex: 3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+footer #chat .perfil-status
+{
+    flex: 1;
+}
+
+footer #chat .corpo
+{
+    background-color: rgb(169, 238, 169);
+    display: flex;
+    display: none;
+    flex-direction: column;
+    height: 40vh;
+    overflow-y: auto; /* cria o scroll */
+    padding: .4em;
+}
+
+footer #chat .chat-msg
+{
+    background: lightgoldenrodyellow;
+    border-radius: 1em;
+    box-shadow: 0 0 5px #999;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: justify;
+    width: 85%;
+}
+
+footer #chat .chat-msg-enviada
+{
+    align-self: flex-end; /* alinhamento para os filhos */
+    background: rgba(0, 128, 0, 0.623);
+    text-align: justify;
+}
+
+footer #chat .mensagem
+{
+    align-items: center;
+    display: flex;
+    flex: 6;
+    height: 100%;
+}
+
+footer #chat .mensagem textarea
+{
+    height: 80%;
+    margin-right: 1em;
+    resize: none;
+    width: 100%;
+  
+}
+
+footer #chat .mensagem button
+{
+    height: 70%;
+  
+}
+
+footer #chat .rodape
+{
+    align-items: center;
+    background-color: rgb(169, 238, 169);
+    display: none;
+    height: 2vw;
+}
+
+footer #chat .rodape i
+{
+    flex-basis: 32px;
+    text-align: center;
+}
+
+#chat:hover .corpo
+{
+    display: flex;
+}
+
+#chat:hover .rodape
+{
+    display: block;
+}
