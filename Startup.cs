@@ -40,7 +40,7 @@ namespace Senai.Projetos.Comentarios_Check_Point
             app.UseMvc(
                 rota => rota.MapRoute(
                     name: "default",
-                    template: "{controller=Pages}/{action=Planos}"
+                    template: "{controller=Pages}/{action=Home}"
                 )
             );
         }
