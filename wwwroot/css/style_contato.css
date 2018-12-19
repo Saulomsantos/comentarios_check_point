@@ -69,12 +69,16 @@ body
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    transition: .2s;
+    transition-timing-function: ease-out;
 }
 
 #topo .menu li a:hover
 {
     color: red;
     text-shadow: 0px 0px 2px rgb(47, 47, 47);
+    transition: .2s;
+    transition-timing-function: ease-in;
 }
 
 #banner
@@ -204,11 +208,15 @@ main form .botao_enviar
     outline: none;
     padding: .8vw 3vw;
     width: 10vw;
+    transition: .5s;
+    transition-timing-function: ease-out;
 }
 
 main form .botao_enviar:hover
 {
     background-color: #e20000;
+    transition: .5s;
+    transition-timing-function: ease-in;
 }
 
 main .fundo

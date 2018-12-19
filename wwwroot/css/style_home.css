@@ -68,32 +68,228 @@ body
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+    transition: .2s;
+    transition-timing-function: ease-out;
 }
 
 #topo .menu li a:hover
 {
     color: red;
     text-shadow: 0px 0px 2px rgb(47, 47, 47);
-}
-
-.alert
-{
-    font-size: 2vw;
-    font-weight: 900;
-    padding: 22vw;
-    text-align: center;
+    transition: .2s;
+    transition-timing-function: ease-in;
 }
 
 #banner
 {
+    align-items: center;
     background-image: url(../img/background/background_topo.png);
     background-size: cover;
+    color: white;
+    display: grid;
+    grid-column-gap: 5%;
+    grid-template-columns: 40% 50%;
     height: 39vw;
+    padding-left: 12vw;
+    text-align: justify;
 }
 
+#banner .check_point
+{
+    align-items: center;
+    display: grid;
+    grid-template-rows: 5vw 9vw 8vw;
+}
 
+#banner .check_point h1
+{
+    font-size: 3vw;
+    font-weight: 900;
+    letter-spacing: .2vw;
+}
 
+#banner .check_point p
+{
+    font-size: 1.5vw;
+    letter-spacing: .1vw;
+}
 
+#banner .check_point .botoes
+{
+    display: grid;
+    font-size: 1.5vw;
+    grid-template-columns: 11vw 11vw;
+    grid-column-gap: 4vw;
+    justify-self: center;
+}
+
+#banner .check_point a
+{
+    background-color: #ff0000;
+    border-radius: 1.5vw;
+    box-shadow: 2px 2px rgb(137, 137, 137);
+    color: white;
+    padding: 1vw 3vw;
+    text-decoration: none;
+    transition: .5s;
+    transition-timing-function: ease-out;
+}
+
+#banner .check_point a:hover
+{
+    background-color: #e20000;
+    transition: .5s;
+    transition-timing-function: ease-in;
+}
+
+#banner .mockup img
+{
+    height: auto;
+    width: 100%;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding-top: 6vw;
+}
+
+main section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+main h2
+{
+    font-size: 4vw;
+    font-weight: 100;
+    letter-spacing: .05em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+main .timeline
+{
+    align-items: center;
+    align-self: center;
+    display: grid;
+    font-size: 1.5vw;
+    grid-template-columns: 15vw 7vw 10vw 1vw 10vw 12vw 15vw;
+    grid-template-rows: 20vw 15vw 20vw;
+    grid-gap: 1vw;
+    justify-items: center;
+    text-align: justify;
+}
+
+main .timeline .linha_vertical
+{
+    border-left: 1vw dotted black;
+    grid-area: 1 / 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    height: 100%;
+}
+
+main .timeline .linha_horizontal1
+{
+    border-top: 1vw dotted black;
+    grid-area: 1 / 5;
+    width: 100%;
+}
+
+main .timeline .icon_clock
+{
+    grid-area: 1 / 6;
+}
+
+main .timeline .icon_clock img
+{
+    height: auto;
+    width: 6vw;
+}
+
+main .timeline .desc_time
+{
+    display: grid;
+    grid-area: 1 / 7;
+    grid-row-gap: 1vw;
+    grid-template-rows: 5vw 14vw;
+}
+
+main .timeline .desc_location
+{
+    display: grid;
+    grid-area: 2 / 1;
+    grid-row-gap: 1vw;
+    grid-template-rows: 5vw 9vw;
+}
+
+main .timeline .icon_location
+{
+    grid-area: 2 / 2;
+}
+
+main .timeline .icon_location img
+{
+    height: auto;
+    width: 5vw;
+}
+
+main .timeline .linha_horizontal2
+{
+    border-top: 1vw dotted black;
+    grid-area: 2 / 3;
+    width: 100%;
+}
+
+main .timeline .linha_horizontal3
+{
+    border-top: 1vw dotted black;
+    grid-area: 3 / 5;
+    width: 100%;
+}
+
+main .timeline .icon_team
+{
+    display: grid;
+    grid-area: 3 / 6;
+}
+
+main .timeline .icon_team img
+{
+    height: auto;
+    justify-self: center;
+    width: 8vw;
+}
+
+main .timeline .desc_team
+{
+    display: grid;
+    grid-area: 3 / 7;
+    grid-row-gap: 1vw;
+    grid-template-rows: 4vw 15vw;
+}
+
+main #clientes
+{
+    align-items: center;
+    display: grid;
+    grid-gap: 4vw;
+    grid-template-columns: 5vw 5vw 10vw 5vw 5vw 5vw 5vw;
+    grid-template-rows: 10vh;
+    justify-items: center;
+    margin: 20vw;
+}
+
+main #clientes img
+{
+    filter: opacity(25%);
+    height: 100%;
+    width: 100%;
+}
 
 footer
 {
@@ -108,7 +304,7 @@ footer .container_footer
 {
     align-items: center;
     display: grid;
-    height: 100%;
+    height: 85%;
     grid-template-columns: 32% 2% 32% 2% 32%;
     justify-items: center;
     padding-top: 5vw;
@@ -125,14 +321,14 @@ footer .container_footer .logo_carfel
     display: grid;
     grid-template-columns: 12vw;
     grid-template-rows: 5vw;
-    transform: translateY(5vh);
+    transform: translateY(3vw);
 }
 
 footer .container_footer .linha_vertical
 {
     border-left: 2px solid white;
     height: 15vw;
-    transform: translateY(5vh);
+    transform: translateY(3vw);
 }
 
 footer .container_footer #desc_carfel
@@ -152,7 +348,7 @@ footer .container_footer #social_media
     grid-gap: 1vw;
     grid-template-columns: 5vw 5vw 5vw;
     justify-items: center;
-    transform: translateY(5vh);
+    transform: translateY(3vw);
 }
 
 /* chat */
@@ -225,7 +421,7 @@ footer #chat .perfil-imagem img
     margin-left: .5em;
 }
 
-footer #chat personal .flex-container
+footer #chat .personal .flex-container
 {
     align-items: center;
     height: 100%;
